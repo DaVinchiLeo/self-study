@@ -1,5 +1,5 @@
 /*
-1)game with objects
+1)game with objects---------------------------------------------
 
 const name = "Цю хуйню";
 const ele = "9738";
@@ -12,7 +12,7 @@ funHike.print();
 console.log(funHike);*/
 
 /*
-2)game with class
+2)game with class-----------------------------------------------------
 class Vacation {
   constructor(destination, lenght) {
     this.destination = destination;
@@ -28,7 +28,7 @@ const trip2 = new Vacation("Santiago,Cheile", 7);
 trip2.print();
 */
 /*
-3) game with function
+3) game with function---------------------------------------------------
 const createScream = function (logger) {
   return function (message) {
     logger(message.toUpperCase() + "!!!");
@@ -40,3 +40,25 @@ scream(`first`);
 scream(`second`);
 scream(`third`);
 */
+
+//pure function-------------------------------------------------
+const frederick = {
+  name: "Frederick Douglass",
+  canRead: false,
+  canWrite: true,
+};
+const selfEducate = (person) => ({
+  ...person,
+  canRead: true,
+  canWrite: true,
+});
+console.log(selfEducate(frederick));
+console.log(frederick);
+
+//-----------------------------------------------------------------
+function Header(text) {
+  let h1 = document.createElement("h1");
+  h1.innerText = text;
+  document.body.appendChild(h1);
+}
+Header("Header innerText");
